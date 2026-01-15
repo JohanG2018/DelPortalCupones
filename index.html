@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Delportal Supermercados - Inicio</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#006432", // Delportal dark green
+                        secondary: "#4CAF50", // Lighter green for accents
+                        "background-light": "#F5F5F5",
+                        "background-dark": "#121212",
+                    },
+                    fontFamily: {
+                        display: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "1rem",
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .ios-status-bar {
+            height: 44px;
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+    <script defer src="js/include.js"></script>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-gray-900 dark:text-gray-100 min-h-screen pb-24">
+    <div
+        class="ios-status-bar flex justify-between items-center px-6 sticky top-0 bg-background-light dark:bg-background-dark z-50">
+        <span class="text-sm font-semibold">13:58</span>
+        <div class="flex items-center space-x-2">
+            <span class="material-icons-outlined text-sm">signal_cellular_alt</span>
+            <span class="material-icons-outlined text-sm">wifi</span>
+            <span class="material-icons-outlined text-sm">battery_full</span>
+        </div>
+    </div>
+    <div data-include="header.html"></div>
+    <section class="relative w-full overflow-hidden">
+        <div class="relative">
+            <img alt="Miércoles de Frutas y Verduras 15% DTO" class="w-full h-auto object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDve1HlB25J-xP-qOowXBoB0gNGVtLTOXqJGScbf5zw4bfIkhKDqX3UI6tx2T3xKX1sOBNfgz4Meil6ocfjMM8civaG_6MlnywXfSlva4MFwBeIJmYXy1iwk2Y-VwLizuvzmbp5mVpa3dBNeBblPOBfOjfmUZpSqpI3dcyOfDI4ozOcc-tX3MESE5r4aSzry20-A-Hod7_puYixDL3oOsHDAWUC65-7rNxLbHxQ1_ImIz7eaPrQA4FdFt8HLzrnsFCnziym7SLxyzcb" />
+            <div class="absolute bottom-2 left-0 right-0 flex justify-center space-x-2">
+                <div class="w-2 h-2 rounded-full bg-gray-300 dark:bg-gray-600"></div>
+                <div class="w-2 h-2 rounded-full bg-primary"></div>
+                <div class="w-2 h-2 rounded-full bg-gray-300 dark:bg-gray-600"></div>
+            </div>
+        </div>
+    </section>
+    <main class="px-4 mt-4 space-y-4">
+        <div class="bg-primary rounded-2xl p-4 shadow-lg">
+            <h2 class="text-white text-center font-bold text-lg mb-3 tracking-wide">
+                TARJETA DE MEMBRESÍA
+            </h2>
+
+            <!-- Image container -->
+            <div class="bg-white rounded-xl h-32 overflow-hidden">
+                <img src="img/barcode.png" alt="Barcode" class="w-full h-full object-contain grayscale" />
+            </div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-3">
+            <button
+                class="col-span-2 bg-white dark:bg-zinc-800 rounded-2xl p-6 shadow-sm border border-gray-100 dark:border-zinc-700 flex flex-col items-center justify-center text-center relative group active:scale-95 transition-transform">
+                <span class="text-primary dark:text-secondary font-bold text-xl leading-snug">Ingresar al
+                    Supermercado</span>
+                <div class="absolute bottom-2 right-2 opacity-50">
+                    <span class="material-icons-outlined text-amber-300 text-3xl">touch_app</span>
+                </div>
+            </button>
+            <button
+                class="bg-white dark:bg-zinc-800 rounded-2xl p-4 shadow-sm border border-gray-100 dark:border-zinc-700 flex flex-col items-center justify-between group active:scale-95 transition-transform">
+                <span class="text-primary dark:text-secondary font-bold text-[11px] uppercase tracking-tighter">Repite
+                    tu orden</span>
+                <span class="material-icons-outlined text-secondary text-5xl">update</span>
+            </button>
+            <button
+                class="bg-white dark:bg-zinc-800 rounded-2xl p-4 shadow-sm border border-gray-100 dark:border-zinc-700 flex flex-col items-center justify-between group active:scale-95 transition-transform">
+                <span class="text-primary dark:text-secondary font-bold text-xs">Promociones</span>
+                <span class="material-icons-outlined text-secondary text-4xl">campaign</span>
+            </button>
+            <button
+                class="bg-white dark:bg-zinc-800 rounded-2xl p-4 shadow-sm border border-gray-100 dark:border-zinc-700 flex flex-col items-center justify-between group active:scale-95 transition-transform">
+                <span class="text-primary dark:text-secondary font-bold text-xs">Mis Listas</span>
+                <span class="material-icons-outlined text-secondary text-4xl">format_list_bulleted</span>
+            </button>
+            <a href="cuponera.html">
+            <button
+                class="bg-white dark:bg-zinc-800 rounded-2xl p-4 shadow-sm border border-gray-100 dark:border-zinc-700 flex flex-col items-center justify-between group active:scale-95 transition-transform">
+                <span class="text-primary dark:text-secondary font-bold text-xs">Cuponera</span>
+                <span class="material-icons-outlined text-secondary text-4xl">confirmation_number</span>
+            </button>
+            </a>
+        </div>
+    </main>
+    <nav
+        class="fixed bottom-0 left-0 right-0 bg-primary py-2 px-6 flex justify-between items-center shadow-[0_-4px_10px_rgba(0,0,0,0.1)] z-50">
+        <button class="flex flex-col items-center text-white opacity-100">
+            <span class="material-icons-outlined text-2xl">home</span>
+            <span class="text-[10px] font-medium mt-1">Inicio</span>
+        </button>
+        <button class="flex flex-col items-center text-white opacity-70 relative">
+            <span class="material-icons-outlined text-2xl">inventory_2</span>
+            <span class="text-[10px] font-medium mt-1">Pedidos</span>
+            <span
+                class="absolute top-0 -right-2 bg-black text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center border border-white">0</span>
+        </button>
+        <a href="mis_cupones.html">
+        <button class="flex flex-col items-center text-white opacity-70">
+            <span class="material-icons-outlined text-2xl">local_activity</span>
+            <span class="text-[10px] font-medium mt-1">Mis Cupones</span>
+        </button>
+        </a>
+        <button class="flex flex-col items-center text-white opacity-70">
+            <span class="material-icons-outlined text-2xl">person_outline</span>
+            <span class="text-[10px] font-medium mt-1">Perfil</span>
+        </button>
+    </nav>
+    <div class="fixed bottom-1 left-1/2 -translate-x-1/2 w-32 h-1.5 bg-gray-400/30 rounded-full dark:bg-zinc-700"></div>
+
+</body>
+
+</html>

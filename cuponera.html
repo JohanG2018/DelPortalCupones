@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Cuponera - Delportal</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#006837",
+                        secondary: "#8dc63f",
+                        urgent: "#facc15",
+                        critical: "#ef4444",
+                        "background-light": "#f4f7f5",
+                        "background-dark": "#121212",
+                    },
+                    fontFamily: {
+                        display: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "12px",
+                    },
+                },
+            },
+        };
+    </script>
+    <style type="text/tailwindcss">
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+            min-height: max(884px, 100dvh);
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+        }
+        .coupon-dashed-border {
+            border: 2px dashed #cbd5e1;
+            border-radius: 20px;
+        }
+        .dark .coupon-dashed-border {
+            border-color: #3f3f46;
+        }
+        .footer-shadow {
+            box-shadow: 0 -4px 10px rgba(0,0,0,0.1);
+        }
+        .safe-area-bottom {
+            padding-bottom: env(safe-area-inset-bottom);
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+    <script defer src="js/include.js"></script>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100">
+    <div data-include="header.html"></div>
+    <main class="px-4 py-6 space-y-4 mb-32">
+        <div
+            class="sticky top-0 z-50 bg-white dark:bg-zinc-900 border-b border-slate-200 dark:border-zinc-800 px-4 pb-4">
+            <div class="flex items-center justify-between mb-4 h-10">
+                <button class="w-10 h-10 flex items-center justify-start -ml-2">
+                    <span
+                        class="material-symbols-outlined text-primary dark:text-secondary !text-[24px]">arrow_back_ios</span>
+                </button>
+                <h1 class="text-xl font-bold text-primary dark:text-white flex-1 text-center leading-none">Cuponera</h1>
+                <button class="w-10 h-10 flex items-center justify-end -mr-2">
+                    <span class="material-symbols-outlined text-primary dark:text-secondary !text-[24px]">help</span>
+                </button>
+            </div>
+            <div class="flex overflow-x-auto hide-scrollbar gap-2 pb-1">
+                <button
+                    class="flex-shrink-0 px-4 py-2 text-sm font-bold rounded-full bg-primary text-white shadow-sm relative">
+                    Todos
+                </button>
+                <button
+                    class="flex-shrink-0 px-4 py-2 text-sm font-semibold rounded-full bg-slate-100 dark:bg-zinc-800 text-slate-600 dark:text-slate-300 relative">
+                    Lácteos <span
+                        class="absolute -top-1 -right-1 bg-critical text-white text-[9px] w-4 h-4 flex items-center justify-center rounded-full border border-white">2</span>
+                </button>
+                <button
+                    class="flex-shrink-0 px-4 py-2 text-sm font-semibold rounded-full bg-slate-100 dark:bg-zinc-800 text-slate-600 dark:text-slate-300 relative">
+                    Carnes <span
+                        class="absolute -top-1 -right-1 bg-urgent text-black text-[9px] w-4 h-4 flex items-center justify-center rounded-full border border-white">1</span>
+                </button>
+                <button
+                    class="flex-shrink-0 px-4 py-2 text-sm font-semibold rounded-full bg-slate-100 dark:bg-zinc-800 text-slate-600 dark:text-slate-300">
+                    Licores
+                </button>
+                <button
+                    class="flex-shrink-0 px-4 py-2 text-sm font-semibold rounded-full bg-slate-100 dark:bg-zinc-800 text-slate-600 dark:text-slate-300">
+                    Frutas
+                </button>
+            </div>
+        </div>
+        <a class="coupon-dashed-border bg-white dark:bg-zinc-900 overflow-hidden shadow-sm flex flex-col p-1"
+        href="detalle.html?from=cuponera">
+            <div class="flex">
+                <div
+                    class="w-28 h-28 flex-shrink-0 bg-slate-50 dark:bg-zinc-800 relative rounded-l-xl overflow-hidden self-center ml-1">
+                    <img alt="Bebidas Refrescantes" class="w-full h-full object-cover"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDspeHwTjNWL5YMW6-GhEi5kD8TTM-Xq28W7_0qzDxReUGdPLDGhgoItPIRTYB_Ka7aapOcD-oFfhHlmIp-n0YGD4dFjohfvDdTkTkEcX0oVtuyEaiBmlwIIfZA-XeLliIuw2RUm_0fVWn2Bx-tsBI2ha9OCExmttBjYGAaZWupGJs8_hmiL6XVs2Ss_Tjg-vXKlvxK5CMnTWXJUgiJ2jFTg4ZJ0DG8JuEIkqwYi4YBviRgXz2LcEHnZrkqKu9OvqP1PuBXDAh8akXC" />
+                </div>
+                <div class="flex-1 px-4 py-3 flex flex-col justify-between">
+                    <div class="flex items-start justify-between">
+                        <div class="flex flex-col">
+                            <span class="text-3xl font-black text-primary dark:text-secondary leading-none">- 20%</span>
+                            <span class="text-xs font-bold text-critical uppercase mt-1">12 disponibles</span>
+                        </div>
+                        <button
+                            class="bg-primary text-white px-3 py-1.5 rounded-full text-[10px] font-black shadow-md flex items-center gap-1 active:scale-95 transition-transform">
+                            AGREGAR
+                        </button>
+                    </div>
+                    <div class="mt-2">
+                        <h3 class="font-bold text-slate-800 dark:text-white leading-tight text-sm">Bebidas y Jugos
+                            Naturales</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-critical w-full py-2 px-4 flex items-center justify-center rounded-b-xl mt-1">
+                <span class="text-white text-xs font-black tracking-widest tabular-nums leading-none">Expira en
+                    00:42:15</span>
+            </div>
+        </a>
+        <div class="coupon-dashed-border bg-white dark:bg-zinc-900 overflow-hidden shadow-sm flex flex-col p-1">
+            <div class="flex">
+                <div
+                    class="w-28 h-28 flex-shrink-0 bg-slate-50 dark:bg-zinc-800 relative rounded-l-xl overflow-hidden self-center ml-1">
+                    <img alt="Frutas y Verduras frescas" class="w-full h-full object-cover"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFY-TxXEuKO1F3K3LA-8I6tsIsnW613tVoabzgwR7LJqiLo72X3Ij2ouCDrckgzHYJXptit4f560kdOA6vJeztTqjHcz3qXYl4-oPmhYgsSvW6mc5s4nQVTM-IC6FoWP7xwU-Vw2LTtZGqGuGXLzzTFT1Kvo1DzENZ_Gezf-EDO7JYwo2FeAsQNGIaNUaShLchydYT4RF4fJXfwv6QLpAjnxyFZN_E4VN4K43xJPiOGfqGOXoJE_8DFBBbJdl-Zs9QPnfSReLp1GFu" />
+                </div>
+                <div class="flex-1 px-4 py-3 flex flex-col justify-between">
+                    <div class="flex items-start justify-between">
+                        <div class="flex flex-col">
+                            <span class="text-3xl font-black text-primary dark:text-secondary leading-none">- 25%</span>
+                            <span
+                                class="text-xs font-bold text-urgent bg-black/5 dark:bg-white/5 px-1 rounded inline-block w-fit mt-1">5
+                                disponibles</span>
+                        </div>
+                        <button
+                            class="bg-primary text-white px-3 py-1.5 rounded-full text-[10px] font-black shadow-md active:scale-95 transition-transform">
+                            AGREGAR
+                        </button>
+                    </div>
+                    <div class="mt-2">
+                        <h3 class="font-bold text-slate-800 dark:text-white leading-tight text-sm">Canasta de Frutas
+                            &amp; Verduras</h3>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="bg-urgent w-full py-2 px-4 flex items-center justify-center rounded-b-xl mt-1 border-t border-yellow-300/30">
+                <span class="text-black text-xs font-black uppercase tracking-wider">Expira hoy</span>
+            </div>
+        </div>
+        <div class="coupon-dashed-border bg-white dark:bg-zinc-900 overflow-hidden shadow-sm flex flex-col p-1">
+            <div class="flex">
+                <div
+                    class="w-28 h-28 flex-shrink-0 bg-slate-50 dark:bg-zinc-800 relative rounded-l-xl overflow-hidden self-center ml-1">
+                    <img alt="Lácteos y Quesos" class="w-full h-full object-cover"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-LdjOnSkCEEWsfY5o71RXC0-dDmklBpRiug0KpFhartZ9mOfhM9G52xR2cqDa7HABPOqYXfTRNE8gFUsLe-Rao6SE3cOY6fmNQK5rDxKOcwW2MhiWp56ovc4FjThIqjc-ZrmYMQfIjo1A9ZD3fLzQLapLPfxFEUhE1E7I8-fo-1Fv2sw1sMaKjout0dlRMxrZbboJVOEn8_DOXGNPXkadMA53Dv9T4B0R29KEWiLyZsNIaDv6jNOHqnE30j5ngyzWiqMrMEd7PU2Q" />
+                </div>
+                <div class="flex-1 px-4 py-3 flex flex-col justify-between">
+                    <div class="flex items-start justify-between">
+                        <div class="flex flex-col">
+                            <span class="text-3xl font-black text-primary dark:text-secondary leading-none">- 15%</span>
+                            <span class="text-xs font-bold text-secondary uppercase mt-1">24 disponibles</span>
+                        </div>
+                        <button
+                            class="bg-primary text-white px-3 py-1.5 rounded-full text-[10px] font-black shadow-md active:scale-95 transition-transform">
+                            AGREGAR
+                        </button>
+                    </div>
+                    <div class="mt-2">
+                        <h3 class="font-bold text-slate-800 dark:text-white leading-tight text-sm">Lácteos Seleccionados
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-secondary w-full py-2 px-4 flex items-center justify-center rounded-b-xl mt-1">
+                <span class="text-white text-xs font-black uppercase tracking-wider">Expira el 24/10/2023</span>
+            </div>
+        </div>
+        <div class="coupon-dashed-border bg-white dark:bg-zinc-900 overflow-hidden shadow-sm flex flex-col p-1">
+            <div class="flex">
+                <div
+                    class="w-28 h-28 flex-shrink-0 bg-slate-50 dark:bg-zinc-800 relative rounded-l-xl overflow-hidden self-center ml-1">
+                    <img alt="Limpieza" class="w-full h-full object-cover"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_fhJH13erJp9YyGl_2DjA3bfG8sHGEZiUFvjKYLnwIfK8HhWQqZeHIluco6GyjQv34nas-08Q5A4DnhqWM4INql6mmLrkDSsse2J9K-JRj8pUwMx8Oc68erqfQdiL2ZJ-FN6cdMT173M-N9zIW66Gpp_nIetV3A4Z0D4ptfh_0Z6kTzsJdZqJuUL4CuYeJWGWePddHJRNzZHMVbsnN5Xf5GIupiZhaPDU1yQ1nH1o2blPM9cYNKg1oy6xiUHkuCsUzcUimJ6HYm-F" />
+                </div>
+                <div class="flex-1 px-4 py-3 flex flex-col justify-between">
+                    <div class="flex items-start justify-between">
+                        <div class="flex flex-col">
+                            <span class="text-3xl font-black text-primary dark:text-secondary leading-none">10%</span>
+                            <span class="text-xs font-bold text-secondary uppercase mt-1">50 disponibles</span>
+                        </div>
+                        <button
+                            class="bg-primary text-white px-3 py-1.5 rounded-full text-[10px] font-black shadow-md active:scale-95 transition-transform">
+                            AGREGAR
+                        </button>
+                    </div>
+                    <div class="mt-2">
+                        <h3 class="font-bold text-slate-800 dark:text-white leading-tight text-sm">Productos de Limpieza
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-secondary w-full py-2 px-4 flex items-center justify-center rounded-b-xl mt-1">
+                <span class="text-white text-xs font-black uppercase tracking-wider">Expira el 26/10/2023</span>
+            </div>
+        </div>
+    </main>
+    <nav
+        class="fixed bottom-0 left-0 right-0 bg-primary dark:bg-zinc-950 text-white border-t border-white/10 footer-shadow z-[100] safe-area-bottom">
+        <div data-include="footer.html"></div>
+    </nav>
+
+</body>
+
+</html>
